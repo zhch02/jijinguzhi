@@ -387,7 +387,7 @@ body{font-family:'Noto Sans SC',system-ui,sans-serif;background:var(--bg);color:
 </div>
 
 <div class="toast" id="toast">
-  <span class="toast-icon">✓</span>
+  <div class="toast-icon" id="toastIcon">✓</div>
   <span class="toast-msg" id="toastMsg">操作成功</span>
 </div>
 
@@ -398,8 +398,9 @@ let currentFund={code:'',name:''};
 const $=s=>document.querySelector(s);
 
 function showToast(msg,type='success'){
-  const toast=$('#toast'),toastMsg=$('#toastMsg');
+  const toast=$('#toast'),toastMsg=$('#toastMsg'),toastIcon=$('#toastIcon');
   toast.className='toast '+type;
+  toastIcon.textContent=type==='success'?'✓':'!';
   toastMsg.textContent=msg;
   toast.classList.add('show');
   setTimeout(()=>toast.classList.remove('show'),2000);
