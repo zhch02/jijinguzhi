@@ -4,5 +4,5 @@ compatibility_date = "2025-01-01"
 workers_dev = true
 
 routes = [
-  { pattern = "fund-cn.chuankangkk.top", custom_domain = true }
+  { pattern = "jjgz.zcftvs.cloudns.biz", custom_domain = true }
 ]
